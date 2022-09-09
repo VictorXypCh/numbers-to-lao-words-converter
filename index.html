@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers to Lao words Converter</title>
+</head>
+<body>
+   Enter number:  <input id="numInput" type="text" onkeyup="onKeyUp();" autofocus>  
+   </br>
+   </br>
+
+  result: <span id="result"></span> 
+
+  <script src="main.js">
+
+  </script>
+
+  <script>
+    function onKeyUp() {
+              const inputTag = document.getElementById("numInput");
+              const resultTag =  document.getElementById("result");
+
+              const num = inputTag.value;
+              console.log(isNaN(parseInt(num)));
+              if(isNaN(parseInt(num))) {
+                             resultTag.value = "invalid value, please enter numbers." 
+                        
+                    }  else {
+
+               resultTag.innerHTML = getLaoNumber(num);
+                          }
+    }
+
+  </script>
+</body>
+</html>
